@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "title": "Sophie Bluel",
+  
+  "images": {
+    "thumbnail": "/assets/sophie_thumbnail.png",
+    "main": "/assets/sophie-bluel_main.webp"
+  },
+  
+  "description": "Portfolio de la photographe Sophie Bluel",
+  
+  "colors": {
+    "primary": "#DAA520",
+    "background": "#000000"
+  },
+  
+  "date": "February 2022",
+  "type": "Promotional"
+}
