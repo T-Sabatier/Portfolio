@@ -12,18 +12,21 @@ function Home() {
     <div className="home-container">
 
       {/* Layer 1 - Galerie toujours présente */}
-      <Gallery
-        projects={projectsData}
-        onProjectClick={(id) => { /*mémorise le projet cliqué*/
-          setSelectedProject(id); /*mémorise le projet */
-          setView('project'); /*change l'état pour afficher layer 2*/
-        }}
-      />
+      {view === 'gallery' && (
+        <Gallery
+          projects={projectsData}
+          onProjectClick={(id) => { /*mémorise le projet cliqué*/
+            setSelectedProject(id); /*mémorise le projet */
+            setView('project'); /*change l'état pour afficher layer 2*/
+          }}
+        />
+      )}
 
       {/* Layer 2 - Vue projet */}
       {view === 'project' && (
         <ProjectView
           project={projectsData.find(p => p.id === selectedProject)}
+          onMenuClick={() => setView('gallery')}
           onExploreClick={() => setView('details')}
         />
       )}
@@ -32,6 +35,7 @@ function Home() {
       {view === 'details' && (
         <DetailsView
           project={projectsData.find(p => p.id === selectedProject)}
+          onBackClick={() => setView('project')}
         />
       )}
 
