@@ -1,7 +1,7 @@
 function DetailsView({ project, onBackClick }) {
   return (
     <div className="details_view">
-      <img src={project.images.main} />
+      <img src={project.images.detail} />
       <h2>{project.title}</h2>
       <p>{project.description}</p>
       <p>{project.date}</p>
