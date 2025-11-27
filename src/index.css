@@ -1,3 +1,14 @@
 * {
   background-color: rgb(16, 16, 16);
+  background-color: var(--background-color, rgb(16, 16, 16));
+}
+
+#root {
+  margin: 30px;
+  color: antiquewhite;
+}
+
+body[data-theme="Sophie"] {
+  --background-color: rgb(182, 100, 28);
+
 }

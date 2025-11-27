@@ -1,0 +1,12 @@
+.projectView{
+  text-align: center;
+  margin: 150px 0;
+  background-color: var(--background-color, rgb(16,16,16));
+  &__content, h2,p{
+    background-color: var(--background-color, rgb(16,16,16));
+  }
+}
+img{
+  width: 50vw;
+  height: 27vw;
+}

@@ -1,0 +1,22 @@
+.header,a,p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  a{
+  text-decoration: none;
+  color: inherit;
+  }
+
+    &__nav{
+      display: flex;
+      gap: 60px;
+      
+      
+    }
+    
+    &__link--active {
+      text-decoration: underline !important;
+    }
+}

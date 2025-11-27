@@ -1,12 +1,25 @@
-function DetailsView({ project, onBackClick }) {
+import { useParams, Navigate, useNavigate } from "react-router-dom";
+import Projects from "../../Data/Projects.json";
+import "./DetailsView.scss"
+
+
+
+function DetailsView() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const projectFind = Projects.find((project) => project.id === parseInt(id));
+  if (!projectFind) {
+    return <Navigate to="/error" replace />;
+  }
   return (
-    <div className="details_view">
-      <img src={project.images.detail} />
-      <h2>{project.title}</h2>
-      <p>{project.description}</p>
-      <p>{project.date}</p>
-      <p>{project.type}</p>
-      <button onClick={() => onBackClick()}>Projet</button>
+    <div className="detailsView" data-theme={projectFind.theme}>
+      <img src={projectFind.images.detail} />
+      <h2>{projectFind.title}</h2>
+      <p>{projectFind.description}</p>
+      <p>{projectFind.date}</p>
+      <p>{projectFind.type}</p>
+      <button onClick={() => navigate(`/project/${id}`)} > Project </button>
     </div>
 
   )

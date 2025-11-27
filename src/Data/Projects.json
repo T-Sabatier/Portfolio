@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "theme":"Sophie",
     "title": "Sophie Bluel – Portfolio d’architecte",
     "images": {
       "thumbnail": "/assets/sophie_thumbnail.png",
