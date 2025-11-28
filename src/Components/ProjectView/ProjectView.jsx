@@ -26,7 +26,7 @@ function ProjectView() {
   }
 
   return (
-    <div className="projectView" data-theme={projectFind.theme} >
+    <div className="projectView" >
       <button onClick={() => navigate(`/`)} > X </button>
       <img src={projectFind.images.main} />
       <div className="projectView__content">
