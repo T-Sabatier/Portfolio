@@ -1,6 +1,13 @@
 * {
-  margin :0;
   background-color: var(--background-color, rgb(16, 16, 16));
+  color: var(--color, rgb(235, 231, 225));
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 #root {
@@ -8,8 +15,8 @@
 }
 
 body[data-theme="Sophie"] {
-  --background-color: rgb(182, 100, 28);
-
+  --background-color: rgb(239, 245, 228);
+  --color: rgb(207, 118, 1);
 }
 
 body[data-theme="Nina"] {

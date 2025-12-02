@@ -28,11 +28,23 @@ function ProjectView() {
   return (
     <div className="projectView" >
       <button onClick={() => navigate(`/`)} > X </button>
+      <h2>{projectFind.title}</h2>
       <img src={projectFind.images.main} />
+
       <div className="projectView__content">
-        <h2>{projectFind.title}</h2>
-        <p>{projectFind.description}</p>
-        <button onClick={() => navigate(`/project/${id}/details`)} > Explore </button>
+        <div className="projectView__informations">
+          <p>Date {projectFind.date}</p>
+          <p>Type {projectFind.type}</p>
+          <p>Rôle {projectFind.role}</p>
+          <p>Technologies {projectFind.technologies}</p>
+        </div>
+        <div className="projectView__explore">
+          <button onClick={() => navigate(`/project/${id}/details`)} > Explore </button>
+        </div>
+        <div className="projectView__description">
+          <p>{projectFind.description}</p>
+        </div>
+
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
+import "./Project.scss"
 import ProjectView from '../../Components/ProjectView/ProjectView';
 
 function Project() {
   return (
-    <div className="home_project">
+    <div className="homeProject">
       <ProjectView />
     </div>
   )

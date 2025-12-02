@@ -2,15 +2,18 @@
   {
     "id": 1,
     "theme":"Sophie",
-    "title": "Sophie Bluel – Portfolio d’architecte",
+    "title": "Sophie Bluel",
     "images": {
       "thumbnail": "/assets/sophie_thumbnail.png",
       "main": "/assets/sophie_thumbnail.png",
       "detail":"/assets/sophie-bluel_details.webp"
     },
-    "description": "Développement de la page portfolio de l’architecte Sophie Bluel. Fonctionnalités : affichage dynamique des travaux via API, filtres par catégorie, gestion de l’authentification, formulaire d’upload d’images et création d'une modale d’édition.",
+    "description" : "Site portfolio de l'architecte d’intérieur Sophie Bluel",
+    "details": "Développement de la page portfolio de l’architecte Sophie Bluel. Fonctionnalités : affichage dynamique des travaux via API, filtres par catégorie, gestion de l’authentification, formulaire d’upload d’images et création d'une modale d’édition.",
     "date": "Septembre 2025",
-    "type": "JavaScript – Front-End"
+    "type": "Portfolio d’architecte",
+    "role": "Front-end",
+    "technologies": "HTML,CSS,JavaScript"
   },
   {
     "id": 2,
