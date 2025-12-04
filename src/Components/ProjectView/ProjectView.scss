@@ -28,6 +28,9 @@
     &__explore {
       margin:0 100px;
     }
+    &__explore button {
+      text-decoration: underline;
+    }
     button{
       border-style:none;
       cursor : pointer;

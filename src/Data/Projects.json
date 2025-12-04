@@ -1,68 +1,82 @@
 [
   {
     "id": 1,
-    "theme":"Sophie",
+    "theme": "Sophie",
     "title": "Sophie Bluel",
     "images": {
       "thumbnail": "/assets/sophie_thumbnail.png",
       "main": "/assets/sophie_thumbnail.png",
-      "detail":"/assets/sophie-bluel_details.webp"
+      "detail": "/assets/sophie-bluel_details.webp"
     },
-    "description" : "Site portfolio de l'architecte d’intérieur Sophie Bluel",
-    "details": "Développement de la page portfolio de l’architecte Sophie Bluel. Fonctionnalités : affichage dynamique des travaux via API, filtres par catégorie, gestion de l’authentification, formulaire d’upload d’images et création d'une modale d’édition.",
+    "description": "Site portfolio de l'architecte d'intérieur Sophie Bluel",
+    "details": "Développement de la page portfolio de l'architecte Sophie Bluel. Fonctionnalités : affichage dynamique des travaux via API, filtres par catégorie, gestion de l'authentification, formulaire d'upload d'images et création d'une modale d'édition.",
     "date": "Septembre 2025",
-    "type": "Portfolio d’architecte",
+    "type": "Portfolio d'architecte",
     "role": "Front-end",
     "technologies": "HTML,CSS,JavaScript"
   },
   {
     "id": 2,
-    "title": "Kasa – Application de location immobilière",
+    "theme":"Kasa",
+    "title": "Kasa",
     "images": {
       "thumbnail": "/assets/Kasa_thumbnail.png",
       "main": "/assets/Kasa_thumbnail.png",
-      "detail":"/assets/Kasa_details.png"
+      "detail": "/assets/Kasa_details.png"
     },
-    "description": "Création de l'application Kasa avec React et React Router. Intégration complète depuis Figma, gestion des états, composants réutilisables, carrousel d’images, collapses et pages dynamiques synchronisées avec un fichier JSON.",
+    "description": "Application de location immobilière",
+    "details": "Création de l'application Kasa avec React et React Router. Intégration complète depuis Figma, gestion des états, composants réutilisables, carrousel d'images, collapses et pages dynamiques synchronisées avec un fichier JSON.",
     "date": "Octobre 2025",
-    "type": "React – Front-End"
+    "type": "React – Front-End",
+    "role": "Front-end",
+    "technologies": "React,React Router,JavaScript"
   },
   {
     "id": 3,
-    "title": "Nina Carducci – Optimisation SEO & Performance",
-    "theme":"Nina",
+    "theme": "Nina",
+    "title": "Nina Carducci",
     "images": {
       "thumbnail": "/assets/Nina_thumbnail.webp",
       "main": "/assets/Nina_thumbnail.webp",
-      "detail":"/assets/Nina_details.png"
+      "detail": "/assets/Nina_details.png"
     },
-    "description": "Optimisation du site de la photographe Nina Carducci. Travail sur : référencement naturel (SEO), amélioration des performances (Lighthouse), optimisation du code, debugging JavaScript, accessibilité WCAG et rédaction du rapport d’audit.",
+    "description": "Optimisation SEO & Performance",
+    "details": "Optimisation du site de la photographe Nina Carducci. Travail sur : référencement naturel (SEO), amélioration des performances (Lighthouse), optimisation du code, debugging JavaScript, accessibilité WCAG et rédaction du rapport d'audit.",
     "date": "Octobre 2025",
-    "type": "SEO – Performance Web"
+    "type": "SEO – Performance Web",
+    "role": "Front-end",
+    "technologies": "SEO,Lighthouse,JavaScript"
   },
   {
     "id": 4,
-    "title": "Booki – Site de recherche d’hébergements",
+    "theme": "Booki",
+    "title": "Booki",
     "images": {
       "thumbnail": "/assets/booki_thumbnail.jpg",
       "main": "/assets/booki_thumbnail.jpg",
       "detail": "/assets/booki_details.png"
     },
-    "description": "Intégration de la maquette Figma du site Booki en HTML et CSS. Réalisation d’une interface responsive mobile/tablette/desktop, structure sémantique complète, utilisation de Flexbox et conformité aux bonnes pratiques d’intégration.",
-    "date": "Aôut 2025",
-    "type": "HTML/CSS – Intégration Web"
+    "description": "Site de recherche d'hébergements",
+    "details": "Intégration de la maquette Figma du site Booki en HTML et CSS. Réalisation d'une interface responsive mobile/tablette/desktop, structure sémantique complète, utilisation de Flexbox et conformité aux bonnes pratiques d'intégration.",
+    "date": "Août 2025",
+    "type": "HTML/CSS – Intégration Web",
+    "role": "Front-end",
+    "technologies": "HTML,CSS,Flexbox"
   },
   {
-  "id": 5,
-  "title": "Mon Vieux Grimoire – API de notation de livres",
-  "images": {
-    "thumbnail": "/assets/Grimoire_thumbnail.jpg",
-    "main": "/assets/Grimoire_thumbnail.jpg",
-    "detail":"/assets/Grimoire_details.png"
-  },
-  "description": "Développement du back-end complet de l'application Mon Vieux Grimoire. Mise en place d’une API REST sécurisée avec Node.js, Express et MongoDB. Gestion de l’authentification, création et modification de livres, système de notation, stockage d’images optimisé et respect des bonnes pratiques OWASP.",
-  "date": "Novembre 2025",
-  "type": "Back-End – Node.js / MongoDB"
-}
-
+    "id": 5,
+    "theme": "MVG",
+    "title": "Mon Vieux Grimoire",
+    "images": {
+      "thumbnail": "/assets/Grimoire_thumbnail.jpg",
+      "main": "/assets/Grimoire_thumbnail.jpg",
+      "detail": "/assets/Grimoire_details.png"
+    },
+    "description": "API de notation de livres",
+    "details": "Développement du back-end complet de l'application Mon Vieux Grimoire. Mise en place d'une API REST sécurisée avec Node.js, Express et MongoDB. Gestion de l'authentification, création et modification de livres, système de notation, stockage d'images optimisé et respect des bonnes pratiques OWASP.",
+    "date": "Novembre 2025",
+    "type": "Back-End – Node.js / MongoDB",
+    "role": "Back-end",
+    "technologies": "Node.js,Express,MongoDB"
+  }
 ]
