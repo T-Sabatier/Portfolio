@@ -1,10 +1,10 @@
 import "./Project.scss"
-import ProjectView from '../../Components/ProjectView/ProjectView';
+import Carousel from '../../Components/Carousel/Carousel';
 
 function Project() {
   return (
     <div className="homeProject">
-      <ProjectView />
+      <Carousel />
     </div>
   )
 }

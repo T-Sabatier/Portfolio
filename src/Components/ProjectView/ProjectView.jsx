@@ -3,13 +3,11 @@ import { useEffect } from 'react';
 import Projects from "../../Data/Projects.json";
 import "./ProjectView.scss";
 
-
-function ProjectView() {
-
-  const { id } = useParams();
+function ProjectView({ project = false }) {
+  const params = useParams();
   const navigate = useNavigate();
 
-  const projectFind = Projects.find((project) => project.id === parseInt(id));
+  const projectFind = project || Projects.find((p) => p.id === parseInt(params.id));
 
   useEffect(() => {
     if (projectFind) {
@@ -26,10 +24,12 @@ function ProjectView() {
   }
 
   return (
-    <div className="projectView" >
-      <button onClick={() => navigate(`/`)} > X </button>
+    <div className="projectView">
+
+      <button onClick={() => navigate(`/`)}> X </button>
+
       <h2>{projectFind.title}</h2>
-      <img src={projectFind.images.main} />
+      <img src={projectFind.images.main} alt={projectFind.title} />
       <div className="projectView__content">
         <div className="projectView__informations">
           <p>{projectFind.date}</p>
@@ -38,13 +38,14 @@ function ProjectView() {
           <p>{projectFind.technologies}</p>
         </div>
         <div className="projectView__explore">
-          <button onClick={() => navigate(`/project/${id}/details`)} > Explore </button>
+          <button onClick={() => navigate(`/project/${projectFind.id}/details`)}> Explore </button>
         </div>
         <div className="projectView__description">
           <p>{projectFind.description}</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default ProjectView
+
+export default ProjectView;
