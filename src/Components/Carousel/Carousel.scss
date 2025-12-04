@@ -14,7 +14,6 @@
   &__track {
     display: flex;
     height: 100%;
-    gap: 0;
   }
   
   &__slide {
@@ -28,10 +27,27 @@
     opacity: 0.5;
     transition: opacity 0.3s ease;
     pointer-events: auto;
+    transform: scale(1.);
+    
+    // Cache le contenu sauf l'image sur les slides non-actives
+    .projectView__content,
+    h2,
+    button {
+      visibility: hidden;  // Au lieu de display: none
+      opacity: 0;
+    }
     
     &--active {
       opacity: 1;
       cursor: default;
+      
+      // Affiche le contenu sur la slide active
+      .projectView__content,
+      h2,
+      button {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

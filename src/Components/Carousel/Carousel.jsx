@@ -1,24 +1,16 @@
-// Import de motion depuis framer-motion pour créer des animations fluides
 import { motion } from "framer-motion";
-// Import des hooks React : useState pour gérer l'état, useEffect pour les effets de bord
 import { useState, useEffect } from "react";
-// Import des données des projets depuis le fichier JSON
 import Projects from "../../Data/Projects.json";
-// Import du composant ProjectView qui affiche les détails d'un projet
 import ProjectView from "../ProjectView/ProjectView";
-// Import du fichier de styles SCSS pour le carousel
 import "./Carousel.scss";
 
-// Déclaration du composant Carousel
 function Carousel() {
-  // État qui stocke l'index du projet actuellement affiché (0 = premier projet, 1 = deuxième, etc.)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // useEffect s'exécute à chaque fois que currentIndex change
   useEffect(() => {
-    // Récupère le projet actuel dans le tableau Projects selon l'index
-    const currentProject = Projects[currentIndex];
 
+    const currentProject = Projects[currentIndex];
     // Si le projet existe
     if (currentProject) {
       // Applique le thème du projet au body (change les couleurs CSS via data-theme)
@@ -52,7 +44,6 @@ function Carousel() {
 
   // Retourne le JSX du composant (ce qui sera affiché à l'écran)
   return (
-    // Conteneur principal du carousel
     <div className="carousel">
       {/* Conteneur qui masque le débordement (overflow hidden) */}
       <div className="carousel__container">

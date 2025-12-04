@@ -2,7 +2,8 @@
   text-align: center;
   background-color: var(--background-color, rgb(16,16,16));
   color : var(--color, rgb(207, 118, 1));
-  max-width: 800px;
+  width: 70%;
+  max-width: none;
  
     &__content{
       display: flex;
