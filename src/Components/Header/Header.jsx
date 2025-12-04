@@ -5,7 +5,7 @@ function Header() {
   return (
     <nav className="header">
       <NavLink to="/">
-        <p>Sabatier Timothé</p>
+        <p className="header__title">Sabatier Timothé</p>
       </NavLink>
       <div className="header__nav">
         <NavLink

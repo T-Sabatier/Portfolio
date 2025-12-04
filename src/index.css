@@ -1,4 +1,6 @@
 * {
+  font-family: "Bebas Neue";
+  font-size: 20px;
   background-color: var(--background-color, rgb(16, 16, 16));
   color: var(--color, rgb(235, 231, 225));
 }
