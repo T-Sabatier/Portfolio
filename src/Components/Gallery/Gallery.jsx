@@ -1,14 +1,21 @@
-import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 import "./Gallery.scss"
 
-function Gallery({ projects }) {
-  const navigate = useNavigate()
+function Gallery({ projects, onProjectClick }) {
 
   return (
     <div className="gallery">
-      {projects.map(project => (  /*map les projet*/
-        <div key={project.id} onClick={() => navigate(`/project/${project.id}`)} > {/*gestion du click*/}
-          <img className="gallery__img" src={project.images.thumbnail} alt={project.title} /> {/*affiche l'image*/}
+      {projects.map(project => (
+        <div
+          key={project.id}
+          onClick={() => onProjectClick(project.id)}
+        >
+          <motion.img
+            layoutId={`project-img-${project.id}`}
+            className="gallery__img"
+            src={project.images.thumbnail}
+            alt={project.title}
+          />
         </div>
       ))}
     </div>

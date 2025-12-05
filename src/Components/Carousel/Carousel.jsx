@@ -1,30 +1,24 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";  // ← Ajoute ces imports
 import Projects from "../../Data/Projects.json";
 import ProjectView from "../ProjectView/ProjectView";
 import "./Carousel.scss";
 
-function Carousel() {
-  const { id } = useParams();  // Récupère l'ID depuis l'URL
-  const navigate = useNavigate();  // Pour changer l'URL
+function Carousel({ initialProjectId, onClose }) {
 
-  // Trouve l'index du projet depuis l'URL
-  const initialIndex = Projects.findIndex(p => p.id === parseInt(id));
+  const initialIndex = Projects.findIndex(p => p.id === initialProjectId);
   const [currentIndex, setCurrentIndex] = useState(initialIndex >= 0 ? initialIndex : 0);
 
-  // Met à jour l'URL quand currentIndex change
   useEffect(() => {
     const currentProject = Projects[currentIndex];
     if (currentProject) {
-      navigate(`/project/${currentProject.id}`, { replace: true });  // Change l'URL sans ajouter d'historique
       document.body.dataset.theme = currentProject.theme;
     }
 
     return () => {
       delete document.body.dataset.theme;
     };
-  }, [currentIndex, navigate]);
+  }, [currentIndex]);
 
   const goToPrevious = () => {
     if (currentIndex > 0) {
@@ -39,10 +33,20 @@ function Carousel() {
   };
 
   return (
-    <div className="carousel">
+    <motion.div
+      className="carousel"
+      initial={false}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <button className="carousel__close" onClick={onClose}>X</button>
+
       <div className="carousel__container">
         <motion.div
           className="carousel__track"
+          initial={{
+            x: `calc(-${currentIndex * 60}vw + 20vw)`
+          }}
           animate={{
             x: `calc(-${currentIndex * 60}vw + 20vw)`
           }}
@@ -66,7 +70,7 @@ function Carousel() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
