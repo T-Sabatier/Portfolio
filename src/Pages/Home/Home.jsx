@@ -33,24 +33,19 @@ function Home() {
     setIsOpen(false);
   };
 
-  // Calculer l'offset pour centrer le projet actif
   const calculateOffset = () => {
     if (!isOpen) {
-      // Mode fermé : centrer selon les images 80px
       return `calc(50vw - 40px - ${selectedIndex * 90}px)`;
     } else {
-      // Mode ouvert : centrer selon les tailles variables
       let offset = 0;
       for (let i = 0; i < selectedIndex; i++) {
         if (i === selectedIndex - 1) {
-          // Image juste avant = adjacent = 300px
-          offset += 310; // 300px + 10px gap
+          offset += 310;
         } else {
-          // Images lointaines = 80px
-          offset += 90; // 80px + 10px gap
+          offset += 90;
         }
       }
-      return `calc(50vw - 300px - ${offset}px)`; // Centre l'image de 600px
+      return `calc(50vw - 300px - ${offset}px)`;
     }
   };
 
@@ -99,44 +94,64 @@ function Home() {
                   cursor: !isSelected ? 'pointer' : 'default'
                 }}
               >
-                <img
-                  className="gallery__img"
-                  src={project.images.thumbnail}
-                  alt={project.title}
-                />
+                <div className="gallery__image-wrapper">
+                  {isSelected && (
+                    <>
+                      <motion.button
+                        className="gallery__close"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleClose();
+                        }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.5 }}
+                      >
+                        X
+                      </motion.button>
+
+                      <motion.h2
+                        className="gallery__title"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.6, duration: 0.4 }}
+                      >
+                        {project.title}
+                      </motion.h2>
+                    </>
+                  )}
+
+                  <img
+                    className="gallery__img"
+                    src={project.images.thumbnail}
+                    alt={project.title}
+                  />
+                </div>
 
                 {isSelected && (
-                  <>
-                    <motion.button
-                      className="gallery__close"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleClose();
-                      }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 1.5 }}
-                    >
-                      X
-                    </motion.button>
-
-                    <motion.div
-                      className="gallery__content"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.8, duration: 0.6 }}
-                    >
-                      <h2>{project.title}</h2>
+                  <motion.div
+                    className="gallery__content"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.8, duration: 0.6 }}
+                  >
+                    <div className="gallery__content-grid">
                       <div className="gallery__infos">
                         <p>{project.date}</p>
                         <p>{project.type}</p>
                         <p>{project.role}</p>
                         <p>{project.technologies}</p>
                       </div>
-                      <p className="gallery__description">{project.description}</p>
-                      <button className="gallery__explore">Explore</button>
-                    </motion.div>
-                  </>
+
+                      <div className="gallery__explore-wrapper">
+                        <button className="gallery__explore">Explore</button>
+                      </div>
+
+                      <div className="gallery__description-wrapper">
+                        <p className="gallery__description">{project.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
                 )}
               </motion.div>
             );
