@@ -40,18 +40,33 @@ function Home() {
   };
 
   const calculateOffset = () => {
+    // Détection de la taille d'écran
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
+
+    // Largeurs des items selon l'écran
+    const itemWidth = isMobile ? 60 : 80;
+    const selectedWidth = isMobile ? 60 : isTablet ? 90 : 100;
+    const adjacentWidth = isMobile ? 70 : isTablet ? 80 : 90;
+
     if (!isOpen) {
-      return `calc(50vw - 40px - ${selectedIndex * 90}px)`;
+      return `calc(50vw - ${selectedWidth / 2}px - ${selectedIndex * itemWidth}px)`;
     } else {
+      if (isMobile) {
+        // En mobile, on centre l'élément sélectionné
+        return `calc(50vw - 45vw - ${selectedIndex * itemWidth}px)`;
+      }
+
       let offset = 0;
       for (let i = 0; i < selectedIndex; i++) {
         if (i === selectedIndex - 1) {
-          offset += 310;
+          offset += isTablet ? 240 : 310;
         } else {
-          offset += 90;
+          offset += itemWidth;
         }
       }
-      return `calc(50vw - 300px - ${offset}px)`;
+      const centerOffset = isTablet ? 250 : 300;
+      return `calc(50vw - ${centerOffset}px - ${offset}px)`;
     }
   };
 
@@ -89,13 +104,21 @@ function Home() {
             const isSelected = index === selectedIndex && isOpen;
             const isAdjacent = isOpen && (index === selectedIndex - 1 || index === selectedIndex + 1);
 
+            // Largeurs responsive
+            const isMobile = window.innerWidth <= 768;
+            const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
+
+            const selectedWidthValue = isMobile ? '90vw' : isTablet ? 500 : 600;
+            const adjacentWidthValue = isMobile ? 70 : isTablet ? 80 : 300;
+            const defaultWidthValue = isMobile ? 60 : 80;
+
             return (
               <motion.div
                 key={project.id}
                 className={`gallery__item ${isSelected ? 'selected' : ''}`}
                 onClick={() => handleProjectClick(index)}
                 animate={{
-                  width: isSelected ? 600 : isAdjacent ? 300 : 80,
+                  width: isSelected ? selectedWidthValue : isAdjacent ? adjacentWidthValue : defaultWidthValue,
                 }}
                 transition={{
                   type: "spring",
@@ -110,7 +133,7 @@ function Home() {
                 <div className="gallery__image-wrapper">
                   {isSelected && (
                     <motion.h2
-                      className="gallery__title"
+                      className={`gallery__title ${window.innerWidth <= 768 ? 'gallery__title--selected-mobile' : ''}`}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.8 }}

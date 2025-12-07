@@ -22,4 +22,34 @@
     &__link--active {
       text-decoration: underline !important;
     }
+
+    // Tablette
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+      
+      &__nav{
+        gap: 40px;
+      }
+      
+      &__title{
+        font-size: 28px;
+      }
+    }
+
+    // Mobile
+    @media (max-width: 768px) {
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 10px;
+      
+      &__nav{
+        gap: 30px;
+      }
+      
+      &__title{
+        font-size: 32px; /* Plus gros en mobile */
+        font-weight: bold;
+      }
+    }
 }
