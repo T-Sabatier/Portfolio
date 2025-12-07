@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./Home.scss"
 import projectsData from '../../Data/Projects.json';
 import { useGallery } from '../../Context/GalleryContext';
 
 function Home() {
   const { isOpen, setIsOpen, closeGallery, selectedIndex, setSelectedIndex } = useGallery();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isOpen) {
@@ -33,6 +35,10 @@ function Home() {
     closeGallery();
   };
 
+  const handleExplore = (projectId) => {
+    navigate(`/project/${projectId}/details`);
+  };
+
   const calculateOffset = () => {
     if (!isOpen) {
       return `calc(50vw - 40px - ${selectedIndex * 90}px)`;
@@ -50,7 +56,13 @@ function Home() {
   };
 
   return (
-    <div className="home__container">
+    <motion.div
+      className="home__container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {isOpen && (
         <motion.div
           className="overlay"
@@ -130,7 +142,15 @@ function Home() {
                       </div>
 
                       <div className="gallery__explore-wrapper">
-                        <button className="gallery__explore">Explore</button>
+                        <button
+                          className="gallery__explore"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleExplore(project.id);
+                          }}
+                        >
+                          Explore
+                        </button>
                       </div>
 
                       <div className="gallery__description-wrapper">
@@ -144,7 +164,7 @@ function Home() {
           })}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
