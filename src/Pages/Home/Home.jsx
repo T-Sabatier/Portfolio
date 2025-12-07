@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Home.scss"
 import projectsData from '../../Data/Projects.json';
+import { useGallery } from '../../Context/GalleryContext';
 
 function Home() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen, closeGallery, selectedIndex, setSelectedIndex } = useGallery();
 
   useEffect(() => {
     if (isOpen) {
@@ -29,8 +29,8 @@ function Home() {
     }
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
+  const handleOverlayClick = () => {
+    closeGallery();
   };
 
   const calculateOffset = () => {
@@ -54,6 +54,7 @@ function Home() {
       {isOpen && (
         <motion.div
           className="overlay"
+          onClick={handleOverlayClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -96,29 +97,14 @@ function Home() {
               >
                 <div className="gallery__image-wrapper">
                   {isSelected && (
-                    <>
-                      <motion.button
-                        className="gallery__close"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleClose();
-                        }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.5 }}
-                      >
-                        X
-                      </motion.button>
-
-                      <motion.h2
-                        className="gallery__title"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.6, duration: 0.4 }}
-                      >
-                        {project.title}
-                      </motion.h2>
-                    </>
+                    <motion.h2
+                      className="gallery__title"
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                      {project.title}
+                    </motion.h2>
                   )}
 
                   <img
@@ -133,7 +119,7 @@ function Home() {
                     className="gallery__content"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.8, duration: 0.6 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
                   >
                     <div className="gallery__content-grid">
                       <div className="gallery__infos">

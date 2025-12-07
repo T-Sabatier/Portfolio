@@ -16,6 +16,7 @@
   height: calc(100vh - 120px); 
   background-color: var(--background-color, rgb(16, 16, 16));
   z-index: 10;
+  cursor: pointer;
 }
 
 .gallery {
@@ -25,17 +26,21 @@
   align-items: center;
   position: relative;
   z-index: 20;
+  pointer-events: none; /* Désactive les clics sur la galerie elle-même */
 
   &__track {
     display: flex;
     gap: 10px;
     align-items: center;
+    position: relative;
+    pointer-events: none; /* Désactive les clics sur le track */
   }
   
   &__item {
     flex-shrink: 0;
     position: relative;
     border-radius: 8px;
+    pointer-events: auto; /* Réactive les clics sur les items */
 
     &:not(.selected) {
       height: 500px;
@@ -154,7 +159,6 @@
   }
 }
 .gallery__title{
-  top: 20px;
-    left: 50%; // Centré horizontalement
+  top: -15%;
     transform: translateX(-50%);
 }
