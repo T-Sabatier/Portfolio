@@ -53,7 +53,7 @@ function DetailsView() {
           className="detailsView__close"
           onClick={() => navigate("/")}
         >
-          X
+          ↑
         </button>
 
         <div className="detailsView__image-wrapper">
