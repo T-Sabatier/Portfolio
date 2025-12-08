@@ -1,0 +1,168 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(87vh - 30px);
+  width: 100vw;
+  padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+    min-height: calc(80vh - 30px);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border: 2px solid rgb(235, 231, 225);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(235, 231, 225, 0.2);
+    animation: softGlow 5s ease-in-out infinite;
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+      max-width: 100%;
+    }
+  }
+
+  @keyframes softGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(235, 231, 225, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(235, 231, 225, 0.35);
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: rgb(235, 231, 225);
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 0 40px 0;
+    color: rgb(235, 231, 225);
+    opacity: 0.8;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-size: 16px;
+    color: rgb(235, 231, 225);
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: rgb(235, 231, 225);
+    font-family: "Bebas Neue";
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: rgb(235, 231, 225);
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  &__submit {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: rgb(235, 231, 225);
+    color: rgb(16, 16, 16);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Bebas Neue";
+    margin-top: 10px;
+
+    &:hover:not(:disabled) {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      padding: 12px 30px;
+      font-size: 18px;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+
+    &--success {
+      color: #4caf50;
+      border: 1px solid #4caf50;
+    }
+
+    &--error {
+      color: #f44336;
+      border: 1px solid #f44336;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}
