@@ -94,6 +94,20 @@
         overflow: visible; /* Permet au contenu de déborder en dessous */
       }
     }
+    
+    /* Overlay pour les items non sélectionnés */
+    &-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--background-color, rgb(16, 16, 16));
+      opacity: 0.85;
+      z-index: 15;
+      pointer-events: none;
+      border-radius: 8px;
+    }
   }
 
   &__image-wrapper {
@@ -295,4 +309,3 @@
     }
   }
 }
-

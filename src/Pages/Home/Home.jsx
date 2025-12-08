@@ -130,6 +130,11 @@ function Home() {
                   cursor: !isSelected ? 'pointer' : 'default'
                 }}
               >
+                {/* Overlay sur les projets non sélectionnés quand un projet est ouvert */}
+                {isOpen && !isSelected && (
+                  <div className="gallery__item-overlay" />
+                )}
+
                 <div className="gallery__image-wrapper">
                   {isSelected && (
                     <motion.h2
