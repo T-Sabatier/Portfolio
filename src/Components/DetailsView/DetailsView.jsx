@@ -85,6 +85,13 @@ function DetailsView() {
               >
                 Visiter le site
               </button>
+              <a href={projectFind.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gallery__github"
+              >
+                Repo Github
+              </a>
             </div>
 
             <div className="detailsView__description-wrapper">

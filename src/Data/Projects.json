@@ -9,11 +9,12 @@
       "detail": "/assets/sophie-bluel_details.webp"
     },
     "description": "Site portfolio de l'architecte d'intérieur Sophie Bluel",
-    "details": "Développement de la page portfolio de l'architecte Sophie Bluel. Fonctionnalités : affichage dynamique des travaux via API, filtres par catégorie, gestion de l'authentification, formulaire d'upload d'images et création d'une modale d'édition.",
+    "details": "Développement du portfolio de l'architecte Sophie Bluel : affichage dynamique via API, filtres par catégorie, authentification, upload d'images et modale d'édition.",
     "date": "Septembre 2025",
     "type": "Portfolio d'architecte",
     "role": "Front-end",
-    "technologies": "HTML,CSS,JavaScript"
+    "technologies": "HTML,CSS,JavaScript",
+    "github": "https://github.com/T-Sabatier/SophieBluel"
   },
   {
     "id": 2,
@@ -25,11 +26,12 @@
       "detail": "/assets/Kasa_details.png"
     },
     "description": "Application de location immobilière",
-    "details": "Création de l'application Kasa avec React et React Router. Intégration complète depuis Figma, gestion des états, composants réutilisables, carrousel d'images, collapses et pages dynamiques synchronisées avec un fichier JSON.",
+    "details": "Création avec React : intégration Figma, gestion d'état, composants réutilisables, carrousel, collapses et pages dynamiques.",
     "date": "Octobre 2025",
     "type": "React – Front-End",
     "role": "Front-end",
-    "technologies": "React,React Router,JavaScript"
+    "technologies": "React,React Router,JavaScript",
+    "github": "https://github.com/T-Sabatier/Kasa"
   },
   {
     "id": 3,
@@ -41,11 +43,13 @@
       "detail": "/assets/Nina_details.png"
     },
     "description": "Optimisation SEO & Performance",
-    "details": "Optimisation du site de la photographe Nina Carducci. Travail sur : référencement naturel (SEO), amélioration des performances (Lighthouse), optimisation du code, debugging JavaScript, accessibilité WCAG et rédaction du rapport d'audit.",
+    "details": "Optimisation du site: SEO, performances, accessibilité et corrections de code.",
     "date": "Octobre 2025",
     "type": "SEO – Performance Web",
     "role": "Front-end",
-    "technologies": "SEO,Lighthouse,JavaScript"
+    "technologies": "SEO,Lighthouse,JavaScript",
+    "link":"https://t-sabatier.github.io/nina/",
+    "github": "https://github.com/T-Sabatier/nina"
   },
   {
     "id": 4,
@@ -57,11 +61,13 @@
       "detail": "/assets/booki_details.png"
     },
     "description": "Site de recherche d'hébergements",
-    "details": "Intégration de la maquette Figma du site Booki en HTML et CSS. Réalisation d'une interface responsive mobile/tablette/desktop, structure sémantique complète, utilisation de Flexbox et conformité aux bonnes pratiques d'intégration.",
+    "details": "Intégration du site Booki en HTML/CSS : interface responsive et structure sémantique soignée.",
     "date": "Août 2025",
     "type": "HTML/CSS – Intégration Web",
     "role": "Front-end",
-    "technologies": "HTML,CSS,Flexbox"
+    "technologies": "HTML,CSS,Flexbox",
+    "link":"https://t-sabatier.github.io/Booki/#",
+    "github": "https://github.com/T-Sabatier/Booki"
   },
   {
     "id": 5,
@@ -73,10 +79,12 @@
       "detail": "/assets/Grimoire_details.png"
     },
     "description": "API de notation de livres",
-    "details": "Développement du back-end complet de l'application Mon Vieux Grimoire. Mise en place d'une API REST sécurisée avec Node.js, Express et MongoDB. Gestion de l'authentification, création et modification de livres, système de notation, stockage d'images optimisé et respect des bonnes pratiques OWASP.",
+    "details": "Back-end complet : API REST sécurisée, authentification, gestion des livres, notation et optimisation des images.",
     "date": "Novembre 2025",
     "type": "Back-End – Node.js / MongoDB",
     "role": "Back-end",
-    "technologies": "Node.js,Express,MongoDB"
+    "technologies": "Node.js,Express,MongoDB",
+    "link":"https://t-sabatier.github.io/Mon-vieux-grimoire",
+    "github": "https://github.com/T-Sabatier/Mon-vieux-grimoire"
   }
 ]
