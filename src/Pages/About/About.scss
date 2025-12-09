@@ -1,0 +1,138 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(87vh - 30px);
+  width: 100vw;
+  padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+    min-height: calc(80vh - 30px);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    font-size: 64px;
+    margin: 0;
+    color: rgb(235, 231, 225);
+    line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgb(235, 231, 225);
+      margin: 0;
+      text-align: justify;
+
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__cv-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: rgb(235, 231, 225);
+    color: rgb(16, 16, 16);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: fit-content;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(235, 231, 225, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 12px 30px;
+      font-size: 18px;
+    }
+  }
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      order: -1;
+    }
+  }
+
+  &__image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(235, 231, 225);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: rgba(235, 231, 225, 0.5);
+
+    @media (max-width: 768px) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgb(235, 231, 225);
+  }
+}
