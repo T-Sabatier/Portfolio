@@ -38,18 +38,21 @@
 
     // Mobile
     @media (max-width: 768px) {
-      padding: 0 15px;
+      padding-bottom: 15px;
       flex-direction: column;
       gap: 10px;
-      padding-top: 10px;
+      
       
       &__nav{
         gap: 30px;
+         border-bottom: 2px solid white;
       }
       
       &__title{
-        font-size: 32px; /* Plus gros en mobile */
+        font-size: 45px; /* Plus gros en mobile */
         font-weight: bold;
+        margin: 0;
+        padding: 0;
       }
     }
 }

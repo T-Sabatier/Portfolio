@@ -23,6 +23,14 @@ function Home() {
   }, [isOpen, selectedIndex]);
 
   const handleProjectClick = (index) => {
+    // Sur mobile : va directement à la page détails
+    if (window.innerWidth <= 768) {
+      const project = projectsData[index];
+      navigate(`/project/${project.id}/details`);
+      return;
+    }
+
+    // Sur desktop : comportement normal
     if (!isOpen) {
       setSelectedIndex(index);
       setIsOpen(true);
