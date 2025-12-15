@@ -1,17 +1,17 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Layout from "./Components/Layout/Layout"
 import Router from "./router";
 import { GalleryProvider } from "./Context/GalleryContext";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GalleryProvider>
         <Layout>
           <Router />
         </Layout>
       </GalleryProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

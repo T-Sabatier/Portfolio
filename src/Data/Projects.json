@@ -4,9 +4,9 @@
     "theme": "Sophie",
     "title": "Sophie Bluel",
     "images": {
-      "thumbnail": "/assets/sophie_thumbnail.png",
-      "main": "/assets/sophie_thumbnail.png",
-      "detail": "/assets/sophie-bluel_details.webp"
+      "thumbnail": "assets/sophie_thumbnail.png",
+      "main": "assets/sophie_thumbnail.png",
+      "detail": "assets/sophie-bluel_details.webp"
     },
     "description": "Site portfolio de l'architecte d'intérieur Sophie Bluel",
     "details": "Développement du portfolio de l'architecte Sophie Bluel : affichage dynamique via API, filtres par catégorie, authentification, upload d'images et modale d'édition.",
@@ -22,9 +22,9 @@
     "theme":"Kasa",
     "title": "Kasa",
     "images": {
-      "thumbnail": "/assets/Kasa_thumbnail.png",
-      "main": "/assets/Kasa_thumbnail.png",
-      "detail": "/assets/Kasa_details.png"
+      "thumbnail": "assets/Kasa_thumbnail.png",
+      "main": "assets/Kasa_thumbnail.png",
+      "detail": "assets/Kasa_details.png"
     },
     "description": "Application de location immobilière",
     "details": "Création avec React : intégration Figma, gestion d'état, composants réutilisables, carrousel, collapses et pages dynamiques.",
@@ -40,9 +40,9 @@
     "theme": "Nina",
     "title": "Nina Carducci",
     "images": {
-      "thumbnail": "/assets/Nina_thumbnail.webp",
-      "main": "/assets/Nina_thumbnail.webp",
-      "detail": "/assets/Nina_details.png"
+      "thumbnail": "assets/Nina_thumbnail.webp",
+      "main": "assets/Nina_thumbnail.webp",
+      "detail": "assets/Nina_details.png"
     },
     "description": "Optimisation SEO & Performance",
     "details": "Optimisation du site: SEO, performances, accessibilité et corrections de code.",
@@ -58,9 +58,9 @@
     "theme": "Booki",
     "title": "Booki",
     "images": {
-      "thumbnail": "/assets/booki_thumbnail.jpg",
-      "main": "/assets/booki_thumbnail.jpg",
-      "detail": "/assets/booki_details.png"
+      "thumbnail": "assets/booki_thumbnail.jpg",
+      "main": "assets/booki_thumbnail.jpg",
+      "detail": "assets/booki_details.png"
     },
     "description": "Site de recherche d'hébergements",
     "details": "Intégration du site Booki en HTML/CSS : interface responsive et structure sémantique soignée.",
@@ -76,9 +76,9 @@
     "theme": "MVG",
     "title": "Mon Vieux Grimoire",
     "images": {
-      "thumbnail": "/assets/Grimoire_thumbnail.jpg",
-      "main": "/assets/Grimoire_thumbnail.jpg",
-      "detail": "/assets/Grimoire_details.png"
+      "thumbnail": "assets/Grimoire_thumbnail.jpg",
+      "main": "assets/Grimoire_thumbnail.jpg",
+      "detail": "assets/Grimoire_details.png"
     },
     "description": "API de notation de livres",
     "details": "Back-end complet : API REST sécurisée, authentification, gestion des livres, notation et optimisation des images.",
