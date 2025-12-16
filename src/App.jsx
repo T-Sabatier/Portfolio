@@ -5,13 +5,13 @@ import { GalleryProvider } from "./Context/GalleryContext";
 
 function App() {
   return (
-    <HashRouter>
-      <GalleryProvider>
+    <GalleryProvider>
+      <HashRouter>
         <Layout>
           <Router />
         </Layout>
-      </GalleryProvider>
-    </HashRouter>
+      </HashRouter>
+    </GalleryProvider>
   );
 }
 

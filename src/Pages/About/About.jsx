@@ -63,7 +63,6 @@ function About() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <div className="about__image-placeholder">
-            {/* Remplace ce div par : <img src="/assets/photo.jpg" alt="Timothé Sabatier" className="about__image" /> */}
             <span>Photo</span>
           </div>
         </motion.div>
