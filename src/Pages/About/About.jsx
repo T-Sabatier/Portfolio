@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "./About.scss";
+import cv from "../../../public/assets/CV_Sabatier_Timothe.pdf"
 
 function About() {
   return (
@@ -48,7 +49,7 @@ function About() {
           </div>
 
           <a
-            href="/assets/CV_Timothe_Sabatier.pdf"
+            href={cv}
             download
             className="about__cv-button"
           >
