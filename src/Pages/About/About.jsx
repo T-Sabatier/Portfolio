@@ -48,8 +48,8 @@ function About() {
           </div>
 
           <a
-            href="/Portfolio/CV_Sabatier_Timothe.pdf"
-            download
+            href="/Portfolio/assets/CV_Sabatier_Timothe.pdf"
+            download="CV_Sabatier_Timothe.pdf"
             className="about__cv-button"
           >
             Télécharger mon CV
