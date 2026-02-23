@@ -27,8 +27,9 @@ function Header() {
             `header__link ${isActive ? "header__link--active" : ""}`
           }
         >
-          A Propos
+          À propos
         </NavLink>
+        <span className="header__divider">|</span>
         <NavLink
           to="/Contact"
           className={({ isActive }) =>

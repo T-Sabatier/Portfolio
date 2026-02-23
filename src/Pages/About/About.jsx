@@ -58,7 +58,7 @@ function About() {
           </a>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="about__image-wrapper"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -67,7 +67,7 @@ function About() {
           <div className="about__image-placeholder">
             <span>Photo</span>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

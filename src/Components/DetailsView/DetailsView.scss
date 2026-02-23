@@ -7,7 +7,7 @@
   overflow: visible;
   position: relative;
   background-color: var(--background-color, rgb(16, 16, 16));
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 
   // Tablette
   @media (max-width: 1024px) {
@@ -16,10 +16,11 @@
 
   // Mobile
   @media (max-width: 768px) {
-    min-height: calc(80vh - 30px);
-    overflow-y: auto;
+    min-height: unset;
+    overflow-y: visible;
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 0;
   }
 
   &__title {
@@ -47,12 +48,14 @@
     // Mobile
     @media (max-width: 768px) {
       position: relative;
+      left: 0;
       transform: none;
       font-size: 56px;
+      width: 100%;
       max-width: 100%;
       text-align: center;
-      margin-bottom: 30px;
-      padding: 0 40px;
+      margin-bottom: 20px;
+      padding: 0 -30px;
     }
   }
 
@@ -77,6 +80,7 @@
   }
 
   &__close {
+    position: absolute;
     top: -40px;
     left: 0;
     background: transparent;
@@ -94,10 +98,10 @@
 
     // Mobile
     @media (max-width: 768px) {
+      position: static;
       font-size: 24px;
-      top: -35px;
-      right: 150px;
-      left: auto;
+      margin-bottom: 12px;
+      margin-left: 40px;
     }
   }
 
@@ -122,8 +126,8 @@
     // Mobile
     @media (max-width: 768px) {
       height: 300px;
-      padding-left: 20px;
-      border-radius: 0px
+      margin-left: 20px;
+      border-radius: 10px
         }
   }
 
